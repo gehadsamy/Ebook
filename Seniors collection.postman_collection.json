@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "757fc179-052a-45d0-b391-f72f412c1b10",
+		"name": "Seniors collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23159361"
+	},
+	"item": [
+		{
+			"name": "ebooks",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/storefront/products?filter[product_type]=digital&filter[sub_product_type]=book",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"storefront",
+								"products"
+							],
+							"query": [
+								{
+									"key": "filter[product_type]",
+									"value": "digital"
+								},
+								{
+									"key": "filter[sub_product_type]",
+									"value": "book"
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdXRoZW50aWNhYmxlX2lkIjo5LCJhdXRoZW50aWNhYmxlX3R5cGUiOiJTcHJlZTo6VXNlciIsImRldmljZSI6MTQzLCJjcmVhdGVkX2F0IjoxNjczODcxNTA5LCJleHAiOjQ4Mjk1NjY3MDl9.PlNelre_ehGa3GruTipCZx1PxkTrHbkxp61ozwIqf9g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v2/storefront/products/:product_ID",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"storefront",
+								"products",
+								":product_ID"
+							],
+							"variable": [
+								{
+									"key": "product_ID",
+									"value": "38"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
